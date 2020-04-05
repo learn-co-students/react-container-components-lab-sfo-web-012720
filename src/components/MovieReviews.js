@@ -13,13 +13,10 @@ const IndividualReview = ({ headline, byline, link, summary_short}) => {
     )  
 }
 
-const MovieReviews = ({ reviews }) => {
-    // console.log(reviews, IndividualReview)
-    return (
-        <div className="review-list">
-            {reviews.map(IndividualReview)}
-        </div>
-    )
+const MovieReviews = ({ reviews }) => <div className="review-list">{reviews.map(IndividualReview)}</div>
+
+MovieReviews.defaultProps = {
+    reviews: []
 }
 
 export default MovieReviews
